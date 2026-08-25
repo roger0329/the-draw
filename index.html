@@ -65,12 +65,14 @@
     color:var(--gold);
     text-transform:uppercase;
     margin:0 0 14px;
+    margin-right:-0.35em;
   }
   h1.title{
     font-family:'Noto Serif TC',serif;
     font-weight:900;
     font-size:clamp(32px,6vw,58px);
     margin:0;
+    margin-right:-0.04em;
     background:linear-gradient(180deg,var(--gold-bright) 0%, var(--gold) 55%, #a3771c 100%);
     -webkit-background-clip:text;
     background-clip:text;
@@ -85,6 +87,7 @@
     color:var(--text-muted);
     letter-spacing:.08em;
     margin:10px 0 0;
+    margin-right:-0.08em;
   }
 
   /* ---------- RITUAL STAGE ---------- */
@@ -174,6 +177,7 @@
     display:flex;align-items:center;gap:10px;
   }
   .history-scroll h3::before,.history-scroll h3::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);}
+  .history-scroll h3 span{margin-right:-0.25em;}
   #historyList{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px;}
   #historyList li{
     background:rgba(244,232,208,.04);
@@ -391,7 +395,7 @@
         <circle class="rune-circle" cx="210" cy="210" r="184"/>
         <path id="runePath" d="M 210,26 A 184,184 0 1 1 209.9,26" fill="none"/>
         <text class="rune-glyph" font-size="16" letter-spacing="20">
-          <textPath href="#runePath" startOffset="0%">ᛑ ᛁ ᚵ ᛁ ᛐ ᛆ ᛚ  ᚱ ᛆ ᛐ ᛁ ᚡ ᛁ ᛐ ᚤ × ᛂ ᚿ ᛐ ᚱ ᛂ ᛔ ᚱ ᛂ ᚿ ᛂ ᚢ ᚱ ᛍ ᛡ ᛁ ᛔ</textPath>
+          <textPath href="#runePath" startOffset="0%">ᚠ ᚢ ᚦ ᚨ ᚱ ᚲ ᚷ ᚹ ᚺ ᚾ ᛁ ᛃ ᛇ ᛈ ᛉ ᛊ ᛏ ᛒ ᛖ ᛗ ᛚ ᛜ ᛞ ᛟ</textPath>
         </text>
       </g>
     </svg>
@@ -408,7 +412,7 @@
 </main>
 
 <div class="history-scroll">
-  <h3>已召喚名單</h3>
+  <h3><span>已召喚名單</span></h3>
   <ol id="historyList"><li class="empty">尚無召喚紀錄</li></ol>
 </div>
 
@@ -456,7 +460,7 @@
 <script>
 (function(){
   // 老師專屬密碼：發布前請務必修改成自己的密語
-  const ADMIN_PASSWORD = "TNDA2026";
+  const ADMIN_PASSWORD = "digital2026";
   // ---------- starfield ----------
   const starsEl = document.getElementById('stars');
   for(let i=0;i<70;i++){
